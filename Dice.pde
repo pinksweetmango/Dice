@@ -26,36 +26,35 @@ void draw() {
       }
     }
   }
-    fill(150, 150, 150);
-    stroke(150, 150, 150);
-   // rect(198, 198, 210, 140);
-    fill(0,0,0);
-    noStroke();
-    ellipse(420, 557, 60, 60);
-    fill(255, 255, 255);
-    arc(420, 557, 60, 60, 0, (2*PI*white/224));
- 
+  fill(150, 150, 150);
+  stroke(150, 150, 150);
+  // rect(198, 198, 210, 140);
+  fill(0, 0, 0);
+  noStroke();
+  ellipse(420, 557, 60, 60);
+  fill(255, 255, 255);
+  arc(420, 557, 60, 60, 0, (2*PI*white/224));
+
   textSize(30);
   textAlign(CENTER);
   fill(0);
   text("Number of Dots: " + numDots, 250, 565);
-    textSize(20);
+  textSize(20);
   textAlign(RIGHT);
-     textSize(14);
-     fill(255,255,255);
- text("Black", 436, 547);
-      fill(0);
-text("White", 436, 575);
+  textSize(14);
+  fill(255, 255, 255);
+  text("Black", 436, 547);
+  fill(0);
+  text("White", 436, 575);
   System.out.println("black: " + black);
   System.out.println("white: " + white);
-  
 }
 void mousePressed()
 {
   redraw();
   numDots = 0;
-black = 1;
-white = 1;
+  black = 1;
+  white = 1;
 }
 
 class Die {
