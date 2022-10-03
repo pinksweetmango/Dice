@@ -6,9 +6,8 @@ Die bob;
 int numDots;
 int black;
 int white;
-int ran;
+int ran1;
 void draw() {
-
   strokeWeight(1.5);
   background(150, 150, 150);
   for (int y = 25; y <= 500; y+= 35) {
@@ -16,8 +15,8 @@ void draw() {
       bob = new Die(x, y);
       // bob.dots1();
       bob.show();
-      ran = (int) (Math.random()*2);
-      if (ran == 1) {
+      ran1 = (int) (Math.random()*2);
+      if (ran1 == 1) {
         stroke(0);
         black++;
       } else {
@@ -26,6 +25,7 @@ void draw() {
       }
     }
   }
+  
   fill(150, 150, 150);
   stroke(150, 150, 150);
   // rect(198, 198, 210, 140);
@@ -34,7 +34,6 @@ void draw() {
   ellipse(420, 557, 60, 60);
   fill(255, 255, 255);
   arc(420, 557, 60, 60, 0, (2*PI*white/224));
-
   textSize(30);
   textAlign(CENTER);
   fill(0);
@@ -46,7 +45,6 @@ void draw() {
   text("Black", 436, 547);
   fill(0);
   text("White", 436, 575);
-
 }
 void mousePressed()
 {
@@ -84,16 +82,16 @@ class Die {
     } else if (ranNum == 5) {
       pips = 5;
       numDots+=5;
-    } else { //(ranNum == 6)
+    } else { 
       pips = 6;
       numDots+=6;
     }
   }
   void show() { // memember function
 
-    fill(255*ran, 255*ran, 255*ran);
+    fill(255*ran1, 255*ran1, 255*ran1);
     rect(myX, myY, mySize, mySize, 7);
-    if (ran == 1) {
+    if (ran1 == 1) {
       fill(0);
     } else {
       fill(255, 255, 255);
