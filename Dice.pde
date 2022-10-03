@@ -46,9 +46,7 @@ void draw() {
   text("Black", 436, 547);
   fill(0);
   text("White", 436, 575);
- // System.out.println("Pip: " + numDots);
-//  System.out.println("black: " + black);
- // System.out.println("white: " + white);
+
 }
 void mousePressed()
 {
