@@ -8,6 +8,9 @@ int black;
 int white;
 int ran1;
 void draw() {
+  numDots = 0;
+  black = 1;
+  white = 1;
   strokeWeight(1.5);
   background(150, 150, 150);
   for (int y = 25; y <= 500; y+= 35) {
@@ -49,9 +52,6 @@ void draw() {
 void mousePressed()
 {
   redraw();
-  numDots = 0;
-  black = 1;
-  white = 1;
 }
 
 class Die {
