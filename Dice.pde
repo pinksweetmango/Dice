@@ -1,6 +1,7 @@
 void setup() {
   noLoop();
   size(600, 600);
+  strokeWeight(1.5);
 }
 Die bob;
 int numDots;
@@ -11,24 +12,24 @@ void draw() {
   numDots = 0;
   black = 1;
   white = 1;
-  strokeWeight(1.5);
   background(150, 150, 150);
   for (int y = 25; y <= 500; y+= 35) {
     for (int x = 25; x <= 560; x+= 35) {
       bob = new Die(x, y);
       // bob.dots1();
-      bob.show();
       ran1 = (int) (Math.random()*2);
       if (ran1 == 1) {
         stroke(0);
         black++;
+        bob.show();
       } else {
         stroke(255);
         white++;
+        bob.show();
       }
     }
   }
-  
+
   fill(150, 150, 150);
   stroke(150, 150, 150);
   // rect(198, 198, 210, 140);
@@ -55,7 +56,6 @@ void mousePressed()
 }
 
 class Die {
-
   int mySize, myX, myY, pips; // member variables
   Die(int x, int y) { // constructor
     // fancy initializer
@@ -82,7 +82,7 @@ class Die {
     } else if (ranNum == 5) {
       pips = 5;
       numDots+=5;
-    } else { 
+    } else {
       pips = 6;
       numDots+=6;
     }
