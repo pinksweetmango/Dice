@@ -10,8 +10,8 @@ int white;
 int ran1;
 void draw() {
   numDots = 0;
-  black = 1;
-  white = 1;
+  black = 0;
+  white = 0;
   background(150, 150, 150);
   for (int y = 25; y <= 500; y+= 35) {
     for (int x = 25; x <= 560; x+= 35) {
